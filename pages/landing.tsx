@@ -86,7 +86,7 @@ export default function LandingPage(props) {
                   </CardContent>
                 </CardActionArea>
                 <CardActions style={{ display: "flex", justifyContent: "center" }}>
-                  <Button size='lg' color='warning'>
+                  <Button size='lg' color='warning' href="tel:+34613651290">
                     <Typography variant='h6' style={{ color: "white" }}>
                       Llamanos: 613 651 290
                     </Typography>
