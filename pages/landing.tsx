@@ -49,7 +49,7 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6} style={{ display: "flex", alignItems: "center" }}>
-              <img stylee={{width:"100%", height:"autoo"}} src='/img/logogrande.png' alt='Logo' />
+              <img style={{width:"100%", height:"autoo"}} src='/img/logogrande.png' alt='Logo' />
             </GridItem>
             <GridItem xs={12} sm={12} md={6}>
               <Card style={{ padding: 5 }}>
