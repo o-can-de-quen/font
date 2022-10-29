@@ -26,7 +26,7 @@ export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           navDropdown
@@ -37,7 +37,7 @@ export default function HeaderLinks(props) {
           }}
           buttonIcon={Apps}
           dropdownList={[
-            <Link href="/components">
+            <Link href="/landing">
               <a className={classes.dropdownLink}>All components</a>
             </Link>,
             <a
@@ -49,78 +49,40 @@ export default function HeaderLinks(props) {
             </a>
           ]}
         />
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="blog"
-          color="transparent"
-          className={classes.navLink}
-        >
-          <i className={classes.socialIcons + " fa fa-rss"} />Blog
+      </ListItem> */}
+      {/* <ListItem className={classes.listItem}>
+        <Button href='blog' color='transparent' className={classes.navLink}>
+          <i className={classes.socialIcons + " fa fa-rss"} />
+          Blog
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          href="https://github.com/app-generator/nextjs-material-kit"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
+        <Button href='https://github.com/app-generator/nextjs-material-kit' color='transparent' target='_blank' className={classes.navLink}>
           <CloudDownload className={classes.icons} /> Download
         </Button>
-      </ListItem>
+      </ListItem> */}
       <ListItem className={classes.listItem}>
         {/*<Tooltip title="Delete">
           <IconButton aria-label="Delete">
             <DeleteIcon />
           </IconButton>
         </Tooltip>*/}
-        <Tooltip
-          id="instagram-twitter"
-          title="Follow us on twitter"
-          placement={"top"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            href="https://twitter.com/CreativeTim?ref=creativetim"
-            target="_blank"
-            color="transparent"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-twitter"} />
+        <Tooltip id='instagram-twitter' title='Siguenos en Tiktok' placement={"top"} classes={{ tooltip: classes.tooltip }}>
+          <Button href='https://www.tiktok.com/@o.can.de.quen' target='_blank' color='transparent' className={classes.navLink}>
+            <i className={classes.socialIcons + " fab fa-tiktok"} />
           </Button>
         </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-facebook"
-          title="Follow us on facebook"
-          placement={"top"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.facebook.com/CreativeTim?ref=creativetim"
-            target="_blank"
-            className={classes.navLink}
-          >
+        <Tooltip id='instagram-facebook' title='Siguenos en facebook' placement={"top"} classes={{ tooltip: classes.tooltip }}>
+          <Button color='transparent' href='https://www.facebook.com/profile.php?id=100087048889549' target='_blank' className={classes.navLink}>
             <i className={classes.socialIcons + " fab fa-facebook"} />
           </Button>
         </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-tooltip"
-          title="Follow us on instagram"
-          placement={"top"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-            target="_blank"
-            className={classes.navLink}
-          >
+        <Tooltip id='instagram-tooltip' title='Siguenos en instagram' placement={"top"} classes={{ tooltip: classes.tooltip }}>
+          <Button color='transparent' href='https://www.instagram.com/o.can.de.quen' target='_blank' className={classes.navLink}>
             <i className={classes.socialIcons + " fab fa-instagram"} />
           </Button>
         </Tooltip>

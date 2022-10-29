@@ -38,25 +38,23 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="NextJS Material Kit"
+        brand='O can de quen'
         rightLinks={<HeaderLinks />}
         fixed
-        color="transparent"
+        color='transparent'
         changeColorOnScroll={{
           height: 400,
           color: "white",
         }}
         {...rest}
       />
-      <Parallax image="/img/nextjs_header.jpg">
+      <Parallax image='/img/nextjs_header.jpg'>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>NextJS Material Kit.</h1>
-                <h3 className={classes.subtitle}>
-                  A Badass Material Kit based on Material-UI and NextJS.
-                </h3>
+                <h1 className={classes.title}>O can de quen.</h1>
+                <h3 className={classes.subtitle}>Peluquería canina</h3>
               </div>
             </GridItem>
           </GridContainer>
@@ -75,9 +73,9 @@ export default function Components(props) {
         <SectionCompletedExamples />
         <SectionLogin />
         <GridItem md={12} className={classes.textCenter}>
-          <Link href="/login">
+          <Link href='/login'>
             <a className={classes.link}>
-              <Button color="primary" size="lg" simple>
+              <Button color='primary' size='lg' simple>
                 View Login Page
               </Button>
             </a>

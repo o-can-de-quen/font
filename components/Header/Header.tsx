@@ -39,19 +39,11 @@ export default function Header(props: HeaderProps) {
     const windowsScrollTop = window.pageYOffset;
     if (changeColorOnScroll) {
       if (windowsScrollTop > changeColorOnScroll.height) {
-        document.body
-          .getElementsByTagName("header")[0]
-          .classList.remove(classes[color || "primary"]);
-        document.body
-          .getElementsByTagName("header")[0]
-          .classList.add(classes[changeColorOnScroll.color]);
+        document.body.getElementsByTagName("header")[0].classList.remove(classes[color || "primary"]);
+        document.body.getElementsByTagName("header")[0].classList.add(classes[changeColorOnScroll.color]);
       } else {
-        document.body
-          .getElementsByTagName("header")[0]
-          .classList.add(classes[color || "primary"]);
-        document.body
-          .getElementsByTagName("header")[0]
-          .classList.remove(classes[changeColorOnScroll.color]);
+        document.body.getElementsByTagName("header")[0].classList.add(classes[color || "primary"]);
+        document.body.getElementsByTagName("header")[0].classList.remove(classes[changeColorOnScroll.color]);
       }
     }
   };
@@ -63,8 +55,8 @@ export default function Header(props: HeaderProps) {
     [classes.fixed]: fixed,
   });
   const brandComponent = (
-    <Link href="/components" as="/components">
-      <Button className={classes.title}>{brand}</Button>
+    <Link href='/landing' as='/landing'>
+      <img src='/img/logo.png' alt='Logo' />
     </Link>
   );
   return (
@@ -73,29 +65,25 @@ export default function Header(props: HeaderProps) {
         {leftLinks !== undefined ? brandComponent : null}
         <div className={classes.flex}>
           {leftLinks !== undefined ? (
-            <Hidden smDown implementation="css">
+            <Hidden smDown implementation='css'>
               {leftLinks}
             </Hidden>
           ) : (
             brandComponent
           )}
         </div>
-        <Hidden smDown implementation="css">
+        <Hidden smDown implementation='css'>
           {rightLinks}
         </Hidden>
         <Hidden mdUp>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerToggle}
-          >
+          <IconButton color='inherit' aria-label='open drawer' onClick={handleDrawerToggle}>
             <Menu />
           </IconButton>
         </Hidden>
       </Toolbar>
-      <Hidden mdUp implementation="js">
+      <Hidden mdUp implementation='js'>
         <Drawer
-          variant="temporary"
+          variant='temporary'
           anchor={"right"}
           open={mobileOpen}
           classes={{
@@ -114,16 +102,7 @@ export default function Header(props: HeaderProps) {
 }
 
 export interface HeaderProps {
-  color?:
-    | "primary"
-    | "info"
-    | "success"
-    | "warning"
-    | "danger"
-    | "transparent"
-    | "white"
-    | "rose"
-    | "dark";
+  color?: "primary" | "info" | "success" | "warning" | "danger" | "transparent" | "white" | "rose" | "dark";
   rightLinks?: ReactElement;
   leftLinks?: ReactElement;
   brand: string;
@@ -131,15 +110,6 @@ export interface HeaderProps {
   absolute?: boolean;
   changeColorOnScroll?: {
     height: number;
-    color:
-      | "primary"
-      | "info"
-      | "success"
-      | "warning"
-      | "danger"
-      | "transparent"
-      | "white"
-      | "rose"
-      | "dark";
+    color: "primary" | "info" | "success" | "warning" | "danger" | "transparent" | "white" | "rose" | "dark";
   };
 }

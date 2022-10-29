@@ -41,16 +41,16 @@ export default function BlogPage(props: { posts: PostType[] }) {
   return (
     <div>
       <Header
-        brand="NextJS Material Kit"
+        brand='O can de quen'
         rightLinks={<HeaderLinks />}
         fixed
-        color="transparent"
+        color='transparent'
         changeColorOnScroll={{
           height: 400,
           color: "white",
         }}
       />
-      <Parallax image="/img/nextjs_header.jpg">
+      <Parallax image='/img/nextjs_header.jpg'>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
@@ -62,14 +62,14 @@ export default function BlogPage(props: { posts: PostType[] }) {
         </div>
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <GridContainer alignItems="center" justifyContent="center">
+        <GridContainer alignItems='center' justifyContent='center'>
           <GridItem xs={6}>
             <div>
               {filteredPosts.map((post, index) => (
                 <BlogCard post={post} key={index} />
               ))}
             </div>
-            <Button onClick={loadMorePosts} size="md" color="primary">
+            <Button onClick={loadMorePosts} size='md' color='primary'>
               Load more
             </Button>
           </GridItem>

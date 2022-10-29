@@ -24,22 +24,15 @@ export const PostPage = (props: { frontMatter; mdxSource }) => {
 
   return (
     <div>
-      <Header
-        brand="NextJS Material Kit"
-        rightLinks={<HeaderLinks />}
-        fixed
-        color="white"
-      />
+      <Header brand='O can de quen' rightLinks={<HeaderLinks />} fixed color='white' />
       <Parallax image={frontMatter.image_url}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
                 <h1 className={classes.title}>{frontMatter.title}</h1>
-                <Typography variant="h5">{frontMatter.published}</Typography>
-                <Typography variant="body2">
-                  {frontMatter.description}
-                </Typography>
+                <Typography variant='h5'>{frontMatter.published}</Typography>
+                <Typography variant='body2'>{frontMatter.description}</Typography>
               </div>
             </GridItem>
           </GridContainer>
@@ -52,10 +45,7 @@ export const PostPage = (props: { frontMatter; mdxSource }) => {
           }}
         >
           <div>
-            <MDXRemote
-              {...mdxSource}
-              components={{ Image, Typography, Button }}
-            />
+            <MDXRemote {...mdxSource} components={{ Image, Typography, Button }} />
           </div>
         </Box>
       </div>
@@ -77,10 +67,7 @@ const getStaticPaths = async () => {
 };
 
 const getStaticProps = async ({ params: { slug } }) => {
-  const markdownWithMeta = fs.readFileSync(
-    path.join("blog/", slug + ".mdx"),
-    "utf-8"
-  );
+  const markdownWithMeta = fs.readFileSync(path.join("blog/", slug + ".mdx"), "utf-8");
 
   const { data: frontMatter, content } = matter(markdownWithMeta);
   const mdxSource = await serialize(content);

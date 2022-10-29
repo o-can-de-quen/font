@@ -21,6 +21,8 @@ import styles from "../styles/jss/nextjs-material-kit/pages/landingPage";
 import ProductSection from "../pages-sections/LandingPage-Sections/ProductSection";
 import TeamSection from "../pages-sections/LandingPage-Sections/TeamSection";
 import WorkSection from "../pages-sections/LandingPage-Sections/WorkSection";
+import Card from "../components/Card/Card";
+import { CardActionArea, CardActions, CardContent, CardMedia, List, ListItem, Tooltip, Typography } from "@material-ui/core";
 
 const dashboardRoutes = [];
 
@@ -31,52 +33,78 @@ export default function LandingPage(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Header
-        color="transparent"
+      {/* <Header
+        color='transparent'
         routes={dashboardRoutes}
-        brand="NextJS Material Kit"
+        brand='O can de quen'
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
           height: 400,
-          color: "white"
+          color: "white",
         }}
         {...rest}
-      />
-      <Parallax filter responsive image="/img/landing-bg.jpg">
+      /> */}
+      <Parallax filter responsive image='/img/landing-bg.jpg' style={{ height: "100vh" }}>
         <div className={classes.container}>
           <GridContainer>
+            <GridItem xs={12} sm={12} md={6} style={{ display: "flex", alignItems: "center" }}>
+              <img src='/img/logogrande.png' alt='Logo' />
+            </GridItem>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Your Story Starts With Us.</h1>
-              <h4>
-                Every landing page needs a small description after the big bold
-                title, that{"'"}s why we added this text here. Add here all the
-                information that can make you or your product create the first
-                impression.
-              </h4>
-              <br />
-              <Button
-                color="danger"
-                size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-play" />
-                Watch video
-              </Button>
+              <Card style={{ padding: 5 }}>
+                <CardActionArea>
+                  <CardMedia component='img' height='300' image='/img/fondo.jpg' alt='green iguana' />
+                  <CardContent>
+                    <Typography gutterBottom variant='h5' component='div'>
+                      Peluquería de mascotas
+                    </Typography>
+                    <Typography variant='body1' color='textSecondary'>
+                      Especialistas en el cuidado de tus mascotas.
+                    </Typography>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-start" }}>
+                      <Typography variant='body1' color='textSecondary'>
+                        Siguenos:
+                      </Typography>
+                      <Tooltip id='instagram-twitter' title='Siguenos en Tiktok' placement={"top"} classes={{ tooltip: classes.tooltip }}>
+                        <Button href='https://www.tiktok.com/@o.can.de.quen' target='_blank' color='transparent' className={classes.navLink}>
+                          <i className={classes.socialIcons + " fab fa-tiktok"} />
+                        </Button>
+                      </Tooltip>
+                      <Tooltip id='instagram-facebook' title='Siguenos en facebook' placement={"top"} classes={{ tooltip: classes.tooltip }}>
+                        <Button color='transparent' href='https://www.facebook.com/profile.php?id=100087048889549' target='_blank' className={classes.navLink}>
+                          <i className={classes.socialIcons + " fab fa-facebook"} />
+                        </Button>
+                      </Tooltip>
+
+                      <Tooltip id='instagram-tooltip' title='Siguenos en instagram' placement={"top"} classes={{ tooltip: classes.tooltip }}>
+                        <Button color='transparent' href='https://www.instagram.com/o.can.de.quen' target='_blank' className={classes.navLink}>
+                          <i className={classes.socialIcons + " fab fa-instagram"} />
+                        </Button>
+                      </Tooltip>
+                    </div>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions style={{ display: "flex", justifyContent: "center" }}>
+                  <Button size='lg' color='warning'>
+                    <Typography variant='h6' style={{ color: "white" }}>
+                      Llamanos: 613 651 290
+                    </Typography>
+                  </Button>
+                </CardActions>
+              </Card>
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
+      {/* <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <ProductSection />
           <TeamSection />
           <WorkSection />
         </div>
-      </div>
-      <Footer />
+      </div> */}
+      {/* <Footer /> */}
     </div>
   );
 }

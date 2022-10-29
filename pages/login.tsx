@@ -32,54 +32,30 @@ export default function LoginPage(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Header
-        absolute
-        color="transparent"
-        brand="NextJS Material Kit"
-        rightLinks={<HeaderLinks />}
-        {...rest}
-      />
+      <Header absolute color='transparent' brand='O can de quen' rightLinks={<HeaderLinks />} {...rest} />
       <div
         className={classes.pageHeader}
         style={{
           backgroundImage: "url('/img/bg7.jpg')",
           backgroundSize: "cover",
-          backgroundPosition: "top center"
+          backgroundPosition: "top center",
         }}
       >
         <div className={classes.container}>
-          <GridContainer justify="center">
+          <GridContainer justify='center'>
             <GridItem xs={12} sm={6} md={4}>
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
-                  <CardHeader color="primary" className={classes.cardHeader}>
+                  <CardHeader color='primary' className={classes.cardHeader}>
                     <h4>Login</h4>
                     <div className={classes.socialLine}>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e) => e.preventDefault()}
-                      >
+                      <Button justIcon href='#pablo' target='_blank' color='transparent' onClick={(e) => e.preventDefault()}>
                         <i className={"fab fa-twitter"} />
                       </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e) => e.preventDefault()}
-                      >
+                      <Button justIcon href='#pablo' target='_blank' color='transparent' onClick={(e) => e.preventDefault()}>
                         <i className={"fab fa-facebook"} />
                       </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e) => e.preventDefault()}
-                      >
+                      <Button justIcon href='#pablo' target='_blank' color='transparent' onClick={(e) => e.preventDefault()}>
                         <i className={"fab fa-google-plus-g"} />
                       </Button>
                     </div>
@@ -87,56 +63,54 @@ export default function LoginPage(props) {
                   <p className={classes.divider}>Or Be Classical</p>
                   <CardBody>
                     <CustomInput
-                      labelText="First Name..."
-                      id="first"
+                      labelText='First Name...'
+                      id='first'
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                       inputProps={{
                         type: "text",
                         endAdornment: (
-                          <InputAdornment position="end">
+                          <InputAdornment position='end'>
                             <People className={classes.inputIconsColor} />
                           </InputAdornment>
-                        )
+                        ),
                       }}
                     />
                     <CustomInput
-                      labelText="Email..."
-                      id="email"
+                      labelText='Email...'
+                      id='email'
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                       inputProps={{
                         type: "email",
                         endAdornment: (
-                          <InputAdornment position="end">
+                          <InputAdornment position='end'>
                             <Email className={classes.inputIconsColor} />
                           </InputAdornment>
-                        )
+                        ),
                       }}
                     />
                     <CustomInput
-                      labelText="Password"
-                      id="pass"
+                      labelText='Password'
+                      id='pass'
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                       inputProps={{
                         type: "password",
                         endAdornment: (
-                          <InputAdornment position="end">
-                            <Icon className={classes.inputIconsColor}>
-                              lock_outline
-                            </Icon>
+                          <InputAdornment position='end'>
+                            <Icon className={classes.inputIconsColor}>lock_outline</Icon>
                           </InputAdornment>
                         ),
-                        autoComplete: "off"
+                        autoComplete: "off",
                       }}
                     />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button simple color="primary" size="lg">
+                    <Button simple color='primary' size='lg'>
                       Get started
                     </Button>
                   </CardFooter>
